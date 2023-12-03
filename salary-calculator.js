@@ -6,10 +6,16 @@ function onReady(){
 
 function addEmployee(event){
     console.log("we're adding employees information");
-    const submitFirstName = document.getElementById("firstNameInput")
-    const submitLastName = document.getElementById("lastNameInput")
-    const submitIdNumber = document.getElementById("idNumber")
-    const submitJobTitle = document.getElementById("jobTitle")
-    const submitAnnualSalary = document.getElementById("annualSalary")
+
+    let firstName = ('firstName').value;
+    let lastName = ('lastName').value;
+    let iDNumber = ('idNumber').value;
+    let jobTitle = ('jobTitle').value;
+    let annualSalary = ('annualSalary').value;
+    
+    tablePath = document.getElementById('employeeDataTable');
+
+    tablePath.innerHTML += `<tr><td>${firstName}</td><td>${lastName}</td><td>${iDNumber}</td><td>${jobTitle}</td><td>${annualSalary}</td></tr>`;
+
 event.preventDefault();
 }
