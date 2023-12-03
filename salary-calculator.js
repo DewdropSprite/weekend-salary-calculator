@@ -1,21 +1,26 @@
 onReady();
 
-function onReady(){
+function onReady() {
     console.log('Javascript is working!');
 }
 
-function addEmployee(event){
+function addEmployee(event) {
     console.log("we're adding employees information");
 
-    let firstName = ('firstName').value;
-    let lastName = ('lastName').value;
-    let iDNumber = ('idNumber').value;
-    let jobTitle = ('jobTitle').value;
-    let annualSalary = ('annualSalary').value;
-    
-    tablePath = document.getElementById('employeeDataTable');
+    const firstName = ("firstNameInput").value;
+    console.log("firstName", firstName)
+    const lastName = ("lastNameInput").value;
+    console.log("lastName", lastName)
+    const iDNumber = ("idInput").value;
+    console.log("iDNumber", iDNumber)
+    const jobTitle = ("titleInput").value;
+    console.log("jobTitle", jobTitle)
+    const annualSalary = ("annualSalaryInput").value;
+    console.log("annualSalary", annualSalary)
 
-    tablePath.innerHTML += `<tr><td>${firstName}</td><td>${lastName}</td><td>${iDNumber}</td><td>${jobTitle}</td><td>${annualSalary}</td></tr>`;
+    const employeeTable = document.querySelector("employeeDataTable");
 
-event.preventDefault();
+    employeeTable.innerHTML += `<tr><td>${firstName}</td><td>${lastName}</td><td>${iDNumber}</td><td>${jobTitle}</td><td>${annualSalary}</td></tr>`;
+
+    event.preventDefault();
 }
