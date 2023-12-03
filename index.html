@@ -16,12 +16,13 @@
     <section>
       <h2>Add Employee</h2>
       <form>
-        <input type="text" id="firstNameInput" placeholder="First Name" />
-        <input type="text" id="lastNameInput" placeholder="Last Name" />
-        <input type="number" id="idInput" placeholder="ID Number" />
-        <input type="text" id="titleInput" placeholder="Job Title" />
-        <input type="number" id="annualSalaryInput" placeholder="Annual Salary" />
-        <button onclick="addEmployee(event)">Submit</button>
+        <input type="text" id="firstNameInput" data-testid="firstNameInput" placeholder="First Name">
+
+        <input type="text" id="lastNameInput" data-testid="lastNameInput" placeholder="Last Name" />
+        <input type="number" id="idInput" data-testid="idInput" placeholder="ID Number" />
+        <input type="text" id="titleInput" data-testid="titleInput" placeholder="Job Title" />
+        <input type="number" id="annualSalaryInput" data-testid="annualSalaryInput" placeholder="Annual Salary" />
+        <button data-testid="submitButton" onclick="addEmployee(event)">Submit</button>
       </form>
     </section>
 
@@ -30,21 +31,16 @@
       <table>
         <thead>
           <tr>
-
-      </table>
-      <tbody>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID Number</th>
-          <th>Job Title</th>
-          <th>Annual Salary</th>
-          <th></th>
-        </tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID Number</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+            <th>Delete</th>
+          </tr>
         </thead>
-      </tbody>
-      <tbody id="employeeDataTable">
-      </tbody>
+        <tbody id="employeeDataTable">
+        </tbody>
       </table>
     </section>
   </main>

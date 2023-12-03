@@ -8,15 +8,15 @@ function addEmployee(event) {
     console.log("we're adding employees information");
 
     let firstNameInput = document.getElementById("firstNameInput").value;
-    //console.log("firstName", firstName)
+    console.log("firstName", firstNameInput)
     let lastNameInput = document.getElementById("lastNameInput").value;
-    //console.log("lastName", lastName)
+    console.log("lastName", lastNameInput)
     let idInput = document.getElementById("idInput").value;
-   // console.log("iDNumber", iDNumber)
+    console.log("iDNumber", idInput)
     let titleInput = document.getElementById("titleInput").value;
-    //console.log("jobTitle", jobTitle)
+    console.log("jobTitle", titleInput)
     let annualSalaryInput = document.getElementById("annualSalaryInput").value;
-    //console.log("annualSalary", annualSalary)
+    console.log("annualSalary", annualSalaryInput)
 
     //const firstNameValue = firstName.value;
     //const lastNameValue = lastName.value;
@@ -27,20 +27,19 @@ function addEmployee(event) {
 
     tablePath = document.getElementById("employeeDataTable");
 
-    tablePath.innerHTML += 
-    `<tr>
-    <td>${firstName}</td>
-    <td>${lastName}</td>
-    <td>${iDNumber}</td>
-    <td>${jobTitle}</td>
-    <td>${annualSalary}</td>
+    tablePath.innerHTML +=`<tr>
+    <td>${firstNameInput}</td>
+    <td>${lastNameInput}</td>
+    <td>${idInput}</td>
+    <td>${titleInput}</td>
+    <td>${annualSalaryInput}</td>
     <td><button onclick="deleteEmployee(event)">Delete</button></td>
     </tr>`;
 
     event.preventDefault();
 }
 
-function deleteEmployee(event){
+function deleteEmployee(event) {
     event.target.parentNode.parentNode.remove();
     event.preventDefault();
 }
