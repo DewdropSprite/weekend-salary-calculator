@@ -1,11 +1,12 @@
 /* FORM ELEMENTS */
 
-input{
+input {
     padding: .5em;
     width: 150px;
     background: #FCFCFC;
-    border: 1px solid; 
+    border: 1px solid;
 }
+
 /* TABLE */
 table {
     width: 100%;
@@ -13,12 +14,20 @@ table {
     border: 1px solid black;
     border-collapse: collapse;
     height: 2.15em;
-  }
-  
-  tr,td,th {
+}
+
+tr,
+td,
+th {
     border: 1px solid black;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: .5em;
     min-width: 3.5em;
-  }
+}
+
+
+#over-budget {
+    color: red;
+    font-weight: bold;
+}
